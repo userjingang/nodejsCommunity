@@ -1,0 +1,116 @@
+
+.glyphicon-fire {
+	top: 3px;	
+} 
+
+.navbar-header i, .navbar-right i {
+	margin:0 5px;
+}
+nav i {
+	margin-right: 5px;
+}
+
+main {
+	margin-top: 60px;
+}
+
+ul {
+	list-style: none;
+}
+
+#user img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-top: -5px;
+}
+
+textarea {
+	resize: none;
+	padding-bottom: 20px;
+	font-size: 30px;
+}
+
+.textarea-font {
+	position: relative;
+}
+.textarea-font span {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+}
+
+
+.navbar-login {
+	margin: 15px 0;
+	color: #9d9d9d;
+	font-size: 18px;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+
+
+.normal {
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+
+#list li {
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	background-color: #f3f3f3;
+}
+#list .answers li {
+	margin-bottom: 5px;
+	background-color: #fff;
+}
+.info {
+	color: #666;
+}
+.goAnswer {
+	cursor: pointer;
+	color: #008000;
+}
+.goAnswer:hover {
+	background-color: #fff;
+}
+
+.media a img {
+	width: 60px;
+	height: 60px;
+	/*border-radius: 50%;*/
+}
+.media .media-left {
+	padding-right: 20px;
+}
+.media .media-left div {
+	/*width: 55px;*/
+	text-align: center;
+	/*margin-bottom: 10px;*/
+	/*background-color: #c9c9c9;*/
+}
+.media .media-left div img {
+	width: 30px;
+}
+.media .media-body .content{
+	/*background-color: #FCF8E3;*/
+}
+
+
+
+
+@media only screen and (min-width: 100px) and (max-width: 760px) {
+	.navbar-header {
+		float: left;
+	}
+	.navbar-right {
+		float: right;
+	}
+	.navbar-right a {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

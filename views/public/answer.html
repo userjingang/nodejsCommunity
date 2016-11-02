@@ -1,0 +1,17 @@
+<li id="{{_id.toString()}}">
+	<div class="media">
+		<div class="media-left">
+			<div class="good"><img src="images/icons/+0.png" /></div>
+			<div class="count">0</div>
+			<div class="hehe"><img src="images/icons/-0.png" /></div>
+		</div>
+		<div class="media-body">
+		    <h4 class="media-heading">{{ownerID.name}}</h4>
+		    <p class="info">{{createTime | getTime}}&#x3000;&#x3000;{{createIP | getIP}}</p>
+		    <p class="content">{{description}}</p>
+		</div>
+		<a class="media-right" href="#">
+		    <img src="images/headPic/{{ownerID.name}}.jpg" alt="..." onerror="this.src='images/headPic/default.jpg'">
+		</a>
+	</div>
+</li>

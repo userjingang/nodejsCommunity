@@ -1,0 +1,18 @@
+<li id="{{_id.toString()}}">
+	<div class="media">
+		<a class="media-left" href="#">
+		    <img src="images/headPic/{{ownerID.name}}.jpg" alt="..." onerror="this.src='images/headPic/default.jpg'">
+		</a>
+		<div class="media-body">
+		    <h4 class="media-heading">{{ownerID.name}}</h4>
+	    	<p class="info">{{createTime | getTime}}&#x3000;&#x3000;{{createIP | getIP}}</p>
+		    <p class="content">{{description}}</p>
+		    <p class="goAnswer">我来回答</p>
+		    <ul class="answers">
+		    	{{each answerList as answer}}
+					{{include 'answer' answer}}
+				{{/each}}
+		    </ul>
+		</div>
+	</div>
+</li>		

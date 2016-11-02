@@ -1,0 +1,40 @@
+{{include '../public/head'}}
+{{include '../public/nav'}}
+<div class="jumbotron">
+	<div class="container">
+	  	<form>
+	  		<div class="input-group form-group">
+			  	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+			  	<input type="text" class="form-control" name="name" required placeholder="请输入2-12位的用户名" pattern="[\u4e00-\u9fa5\w]{2,12}">
+			</div>						
+			<div class="input-group form-group">
+			  	<span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+			  	<input type="password" class="form-control" name="passwd" required autocomplete="off" placeholder="请输入6-16位的密码" pattern="[\w]{6,16}">
+			</div>
+			<div class="input-group form-group">
+			  	<span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+			  	<input type="password" class="form-control" name="passwd2" required autocomplete="off" placeholder="重新输入以确认" pattern="[\w]{6,16}">
+			</div>
+			<div class="input-group form-group">
+			  	<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+			  	<input type="email" class="form-control" name="email" required autocomplete="off" placeholder="请输入邮件地址">
+			</div>
+			<div class="input-group form-group form-control">
+				<div class="radio">
+				  	<label>
+				    	<input type="radio" name="gender" value="true">男
+				  	</label>
+				</div>
+				<div class="radio">
+				  	<label>
+				    	<input type="radio" name="gender" value="false">女
+				  	</label>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary form-control">立即注册</button>						  	
+	  	</form>
+	</div>
+</div>
+{{include '../public/modal'}}
+<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+{{include '../public/foot'}}

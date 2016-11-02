@@ -1,0 +1,32 @@
+{{include 'public/head'}}
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  	<div class="container">
+	    <div class="navbar-header">
+	      	<a class="navbar-brand" href="/"><i class="glyphicon glyphicon-fire"></i>NodeJS 问答交流社区</a>
+	    </div>
+	    <div class="navbar-right">
+			<a class="navbar-title navbar-text" href="#" id="ask"><i class="icon-plus-sign"></i>提问</a>
+			<a class="navbar-title navbar-text" href="#" id="user" data-toggle="dropdown"><i class="icon-user"></i>登录</a>
+			<ul class="dropdown-menu dropdown-menu-right" role="menu">
+				<li><a href="#" class="text-right">个人资料</a></li>
+				<li class="divider"></li>
+				<li><a href="#" class="text-right">退出</a></li>
+			</ul>
+	    </div>
+  </div>
+</nav>
+<div class="jumbotron">
+	<div class="container">
+	  	<h1>NodeJS 问答交流社区<small> 1.0</small></h1>
+	  	<p>嘿~小伙，欢迎来到这里，NodeJS 问答交流社区1.0助你变大牛！</p>
+	  	<p><a class="btn btn-primary btn-small" href="#" role="button">Learn more</a></p>
+	</div>
+</div>
+<ul id="list" class="container">
+{{each questions as question}}
+	{{include 'public/question' question}}
+{{/each}}
+</ul>
+{{include 'public/modal'}}
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+{{include 'public/foot'}}
