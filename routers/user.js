@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var crypto = require('crypto');
 
 var mongooseModel = require('../mongodb.cfg');
 var User = mongooseModel.User;
@@ -11,12 +12,16 @@ function send(res,flag, msg){
 	res.status(200).json({flag,msg});
 }
 
-
+/*
+ * 用户注册
+ */
 router.post('/register',(req,res)=>{
 	var name = req.body.name;	
 	req.body.birthday = new Date();
 	req.body.registerIP = req.ip;
-	
+	req.body.passwd = crypto.createHash('md5')
+							.update(req.body.passwd)
+							.digest('hex')
 	
 	var user = new User(req.body);
 	
@@ -59,6 +64,9 @@ router.post('/login',(req,res)=>{
 			if(result.length == 0){
 				send(res,'fail', '用户名不存在');
 			}else{
+				req.body.passwd = crypto.createHash('md5')
+										.update(req.body.passwd)
+										.digest('hex')
 				if(req.body.name==result[0].name && req.body.passwd==result[0].passwd){
 					res.cookie('signer',req.body.name);
 					res.cookie('signerID', result[0]._id);
@@ -71,6 +79,9 @@ router.post('/login',(req,res)=>{
 	})
 	
 // 	直接验证用户名和密码是否都正确
+//	req.body.passwd = crypto.createHash('md5')
+//							.update(req.body.passwd)
+//							.digest('hex')
 //	User.find({name: req.body.name, passwd: req.body.passwd}, function(err, result){
 //		if(err){
 //			console.log(err);

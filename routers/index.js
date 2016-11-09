@@ -85,7 +85,6 @@ router.get('/', (req,res)=>{
 			console.log(err);
 			send(res,'fail','系统异常，请重试');
 		}else{
-			console.log(result);
 			res.render('index', {title: '首页', questions: result});
 		}		
 	}).populate({
